@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Product from './components/Product';
+import Home from './pages/Home';
 
 function App() {
   const [visible, setVisible] = useState(true);
@@ -15,7 +15,10 @@ function App() {
  <button className='btn btn-danger m-auto d-block' 
  onClick={()=>setVisible(!visible)}>{visible? "Hide Product": "Show Product"}
  </button>
-{visible && <Product/>}
+
+
+
+  <Home/>
     </div>
   );
 }

@@ -1,8 +1,8 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+
+import {InputGroup,Form, Button} from 'react-bootstrap';
 import { useState } from 'react';
-import ShowProductBar from './ShowProductBar';
+import { TiShoppingCart } from "react-icons/ti";
+// import ShowProductBar from './ShowProductBar';
 
 function Product() {
   const [addTocard, setAddTocard] = useState(false);
@@ -11,17 +11,17 @@ function Product() {
     <Form className='container w-50'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Product Name</Form.Label>
-        <Form.Control type="email"  />
+        <Form.Control type="text"  />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Product Price</Form.Label>
-        <Form.Control type="number" placeholder="Password" />
+        <Form.Control type="number" />
       </Form.Group>
    
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Product Quantity</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control type="number"  />
       </Form.Group>
    
        <Form.Label htmlFor="basic-url">Product Image</Form.Label>
@@ -34,6 +34,7 @@ function Product() {
   
       <Button variant="primary" type="submit" className='m-auto d-block'
       onClick={()=>setAddTocard(!addTocard)}>
+        <TiShoppingCart />
        Add To Card
       </Button>
     </Form>
